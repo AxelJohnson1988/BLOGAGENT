@@ -1,9 +1,0 @@
-{
-  "status": "completed",
-  "total_files_found": 3,
-  "memory_blocks_created": 3,
-  "memory_blocks_saved": 3,
-  "errors": 0,
-  "error_messages": [],
-  "output_directory": "_work/pipeline_output"
-}
