@@ -1,0 +1,44 @@
+{
+  "id_hash": "0825c53afa86",
+  "summary": "#!/usr/bin/env python3\n\"\"\"\nQuick Launcher for MUSE Pantheon Universal Ingest Pipeline\nProvides sensible defaults for common use cases\n\"\"\"\nimport sys\nimport argparse\nfrom pathlib import Path\nimport sub...",
+  "content": "#!/usr/bin/env python3\n\"\"\"\nQuick Launcher for MUSE Pantheon Universal Ingest Pipeline\nProvides sensible defaults for common use cases\n\"\"\"\nimport sys\nimport argparse\nfrom pathlib import Path\nimport subprocess\n\ndef main():\n    \"\"\"Quick launcher with sensible defaults.\"\"\"\n    parser = argparse.ArgumentParser(description=\"Quick launcher for MUSE Pantheon Pipeline\")\n    parser.add_argument('--scan-root', default='.',\n                       help='Root directory to scan (default: current directory)')\n    parser.add_argument('--workdir', default='./_work',\n                       help='Working directory for output (default: ./_work)')\n    parser.add_argument('--user', default='user',\n                       help='User identifier (default: user)')\n    parser.add_argument('--apply', action='store_true',\n                       help='Actually run the pipeline (default: dry run)')\n    parser.add_argument('--types', nargs='+',\n                       help='File types to process (default: common types)')\n    \n    args = parser.parse_args()\n    \n    # Set default file types if not specified\n    if not args.types:\n        args.types = ['.py', '.md', '.txt', '.json', '.jpg', '.jpeg', '.png', '.pdf']\n    \n    # Get the script directory\n    script_dir = Path(__file__).parent\n    workspace_root = script_dir.parent.parent\n    \n    print(\"🚀 MUSE Pantheon Quick Launcher\")\n    print(\"=\" * 40)\n    print(f\"Scan Root: {args.scan_root}\")\n    print(f\"Work Directory: {args.workdir}\")\n    print(f\"File Types: {', '.join(args.types)}\")\n    print(f\"User: {args.user}\")\n    print(f\"Mode: {'APPLY' if args.apply else 'DRY RUN'}\")\n    print()\n    \n    if not args.apply:\n        print(\"This is a DRY RUN. Use --apply to actually run the pipeline.\")\n        print()\n        print(\"Proposed command:\")\n        cmd = [\n            sys.executable,\n            str(script_dir / \"run_full_pipeline.py\"),\n            \"--roots\", args.scan_root,\n            \"--workspace\", str(workspace_root)\n        ]\n        if args.types:\n            cmd.extend([\"--types\"] + args.types)\n        \n        print(\" \".join(cmd))\n        return 0\n    \n    # Run the actual pipeline\n    cmd = [\n        sys.executable,\n        str(script_dir / \"run_full_pipeline.py\"),\n        \"--roots\", args.scan_root,\n        \"--workspace\", str(workspace_root)\n    ]\n    \n    if args.types:\n        cmd.extend([\"--types\"] + args.types)\n    \n    print(\"Running pipeline...\")\n    result = subprocess.run(cmd, cwd=workspace_root)\n    \n    return result.returncode\n\nif __name__ == \"__main__\":\n    sys.exit(main())",
+  "topics": [
+    "launcher",
+    "quick",
+    "pipeline",
+    "py",
+    "default:",
+    "run",
+    "import"
+  ],
+  "skills": [
+    "nano_warden_universal_ingest_py.py",
+    "nano_warden_code_analyzer.py",
+    "nano_warden_dependency_tracker.py",
+    "nano_warden_memory_system.py"
+  ],
+  "date": "2025-09-17",
+  "project": "muse.pantheon",
+  "archetype": "Alchemist",
+  "created_at": "2025-09-17T18:19:13.040048+00:00",
+  "source_path": "run_pipeline.py",
+  "file_type": ".py",
+  "pii_redacted": false,
+  "consent_logged": true,
+  "ethics_review": "passed",
+  "links": [],
+  "parent_blocks": [],
+  "metadata": {
+    "file_size": 2556,
+    "source": "file_ingest",
+    "validation_status": "passed",
+    "project_assigned_by": "auto_classifier",
+    "original_project": "muse.pantheon",
+    "project_hierarchy": {
+      "domain": "muse",
+      "category": "pantheon",
+      "subcategory": "core",
+      "description": "Core MUSE Pantheon memory system"
+    }
+  }
+}

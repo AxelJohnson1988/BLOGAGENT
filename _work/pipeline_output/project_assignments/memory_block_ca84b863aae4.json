@@ -1,0 +1,42 @@
+{
+  "id_hash": "ca84b863aae4",
+  "summary": "# MUSE Pantheon Universal Ingest Pipeline\n\nA comprehensive system for converting any file format into structured, semantic MemoryBlocks for AI agent memory systems.\n\n## Quick Start\n\n```bash\n# Process ...",
+  "content": "# MUSE Pantheon Universal Ingest Pipeline\n\nA comprehensive system for converting any file format into structured, semantic MemoryBlocks for AI agent memory systems.\n\n## Quick Start\n\n```bash\n# Process files in current directory\n./run_pipeline.py --scan-root . --apply\n\n# Process specific directory with custom types  \n./run_pipeline.py --scan-root /path/to/files --types .py .md .json --apply\n\n# View interactive results\nopen _work/pipeline_output/clustering_results/cluster_visualization.html\n```\n\n## Features\n\n- **Universal File Processing**: Handles text, code, images, PDFs, videos, archives\n- **Semantic Clustering**: Groups similar content using TF-IDF + K-means  \n- **Project Assignment**: Auto-categorizes content into project hierarchies\n- **Ethics Tracking**: Built-in PII redaction and consent logging\n- **Interactive Visualization**: Explore clusters in 3D semantic space\n\n## Components\n\n- `common/memory_block.py` - Core MemoryBlock schema with 12 archetypes\n- `warden/tools/universal_ingest.py` - Universal file processor\n- `warden/tools/cluster_embeddings.py` - Semantic clustering engine\n- `warden/tools/assign_projects.py` - Project classification system\n- `warden/tools/run_full_pipeline.py` - Complete pipeline orchestrator\n\n## Documentation\n\nSee [PIPELINE_DOCS.md](PIPELINE_DOCS.md) for complete documentation, API reference, and integration examples.\n\nSee [.github/copilot-instructions.md](.github/copilot-instructions.md) for AI agent guidance.\n",
+  "topics": [
+    "pipeline",
+    "system",
+    "file",
+    "universal",
+    "semantic",
+    "readme",
+    "md"
+  ],
+  "skills": [
+    "nano_warden_universal_ingest_md.py",
+    "nano_warden_memory_system.py"
+  ],
+  "date": "2025-09-17",
+  "project": "muse.pantheon",
+  "archetype": "Scribe",
+  "created_at": "2025-09-17T18:19:13.045004+00:00",
+  "source_path": "README.md",
+  "file_type": ".md",
+  "pii_redacted": false,
+  "consent_logged": true,
+  "ethics_review": "passed",
+  "links": [],
+  "parent_blocks": [],
+  "metadata": {
+    "file_size": 1466,
+    "source": "file_ingest",
+    "validation_status": "passed",
+    "project_assigned_by": "auto_classifier",
+    "original_project": "muse.pantheon",
+    "project_hierarchy": {
+      "domain": "muse",
+      "category": "pantheon",
+      "subcategory": "core",
+      "description": "Core MUSE Pantheon memory system"
+    }
+  }
+}
