@@ -3,3 +3,8 @@ __pycache__/
 .venv/
 .env
 .DS_Store
+
+# Pipeline output artifacts
+_work/
+test_data/
+*.html
