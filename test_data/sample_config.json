@@ -1,0 +1,47 @@
+{
+  "test_config": {
+    "pipeline_name": "BLOGAGENT Universal Ingest",
+    "version": "1.0.0",
+    "description": "Sample JSON configuration for testing data structure processing"
+  },
+  "processing_settings": {
+    "file_types": [".py", ".md", ".json", ".txt"],
+    "ethics": {
+      "pii_redaction": true,
+      "consent_logging": true,
+      "privacy_default": "public"
+    },
+    "clustering": {
+      "min_clusters": 2,
+      "max_clusters": 10,
+      "algorithm": "kmeans"
+    }
+  },
+  "test_data": {
+    "documents": [
+      {
+        "id": "doc_001",
+        "type": "code",
+        "language": "python",
+        "themes": ["development", "testing", "validation"]
+      },
+      {
+        "id": "doc_002", 
+        "type": "documentation",
+        "format": "markdown",
+        "themes": ["guides", "instructions", "knowledge"]
+      },
+      {
+        "id": "doc_003",
+        "type": "configuration",
+        "format": "json",
+        "themes": ["settings", "parameters", "structure"]
+      }
+    ]
+  },
+  "expected_outputs": {
+    "memory_blocks": 3,
+    "projects": ["dev.testing", "docs.guides", "general.configuration"],
+    "archetypes": ["Creator", "Guardian", "Analyst"]
+  }
+}

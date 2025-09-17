@@ -1,0 +1,34 @@
+{
+  "id_hash": "sha256:990dde6460ea",
+  "summary": "# Sample Documentation\n\nThis is a sample markdown file for testing the BLOGAGENT universal ingest pipeline. It demonstrates how documentation files are processed into MemoryBlocks. ## Features Being Tested\n\n- **Text extraction**: Converting markdown to plain text\n- **Topic identification**: Finding key themes and concepts  \n- **Project classification**: Mapping to documentation category\n- **Archetype assignment**: Likely \"Creator\" or \"Guardian\" for docs\n\n## Content Themes\n\nThis document contains themes related to:\n- Documentation and guides\n- System testing and validation\n- Knowledge management\n- Information architecture\n\n## Integration Points\n\nThe pipeline should extract:\n1.",
+  "content": "# Sample Documentation\n\nThis is a sample markdown file for testing the BLOGAGENT universal ingest pipeline. It demonstrates how documentation files are processed into MemoryBlocks.\n\n## Features Being Tested\n\n- **Text extraction**: Converting markdown to plain text\n- **Topic identification**: Finding key themes and concepts  \n- **Project classification**: Mapping to documentation category\n- **Archetype assignment**: Likely \"Creator\" or \"Guardian\" for docs\n\n## Content Themes\n\nThis document contains themes related to:\n- Documentation and guides\n- System testing and validation\n- Knowledge management\n- Information architecture\n\n## Integration Points\n\nThe pipeline should extract:\n1. Headers and structure\n2. Key terminology\n3. Thematic content\n4. Cross-references\n\nThis content will help validate the semantic clustering and project assignment components of the pipeline.",
+  "topics": [
+    "documentation",
+    "pipeline",
+    "themes",
+    "content",
+    "sample",
+    "markdown"
+  ],
+  "skills": [
+    "nano_warden_markdown_processor.py",
+    "nano_warden_memory_tagger.py"
+  ],
+  "project": "docs.user_guides",
+  "archetype": "Guardian",
+  "created_at": "2025-09-17T18:17:52.858690Z",
+  "ethics": {
+    "pii_redacted": true,
+    "consent_logged": true,
+    "privacy_level": "public",
+    "redaction_reason": null
+  },
+  "metadata": {
+    "source_file": "/home/runner/work/BLOGAGENT/BLOGAGENT/test_data/sample_docs.md",
+    "file_type": ".md",
+    "size_bytes": 874,
+    "last_modified": "2025-09-17T18:17:52.858690Z",
+    "encoding": "utf-8"
+  },
+  "links": []
+}

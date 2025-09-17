@@ -1,0 +1,37 @@
+{
+  "id_hash": "sha256:5d964be34144",
+  "summary": "JSON structure:\n{\n  \"test_config\": {\n    \"pipeline_name\": \"BLOGAGENT Universal Ingest\",\n    \"version\": \"1. 0\",\n    \"description\": \"Sample JSON configuration for testing data structure processing\"\n  },\n  \"processing_settings\": {\n    \"file_types\": [\n      \". txt\"\n    ],\n    \"ethics\": {\n      \"pii_redaction\": true,\n      \"consent_logging\": true,\n      \"privacy_default\": \"public\"\n    },\n    \"clustering\": {\n      \"min_clusters\": 2,\n      \"max_clusters\": 10,\n      \"algorithm\": \"kmeans\"\n    }\n  },\n  \"test_data\": {\n    \"documents\": [\n      {\n        \"id\": \"doc_001\",\n        \"type\": \"code\",\n        \"language\": \"python\",\n        \"themes\": [\n          \"development\",\n          \"testing\",\n          \"validation\"\n        ]\n      },\n      {\n        \"id\": \"doc_002\",\n        \"type\": \"documentation\",\n        \"format\": \"markdown\",\n        \"themes\": [\n          \"guides\",\n          \"instructions\",\n          \"knowledge\"\n        ]\n      },\n      {\n        \"id\": \"doc_003\",\n        \"type\": \"configuration\",\n        \"format\": \"json\",\n        \"themes\": [\n          \"settings\",\n          \"parameters\",\n          \"structure\"\n        ]\n      }\n    ]\n  },\n  \"expected_outputs\": {\n    \"memory_blocks\": 3,\n    \"projects\": [\n      \"dev.",
+  "content": "JSON structure:\n{\n  \"test_config\": {\n    \"pipeline_name\": \"BLOGAGENT Universal Ingest\",\n    \"version\": \"1.0.0\",\n    \"description\": \"Sample JSON configuration for testing data structure processing\"\n  },\n  \"processing_settings\": {\n    \"file_types\": [\n      \".py\",\n      \".md\",\n      \".json\",\n      \".txt\"\n    ],\n    \"ethics\": {\n      \"pii_redaction\": true,\n      \"consent_logging\": true,\n      \"privacy_default\": \"public\"\n    },\n    \"clustering\": {\n      \"min_clusters\": 2,\n      \"max_clusters\": 10,\n      \"algorithm\": \"kmeans\"\n    }\n  },\n  \"test_data\": {\n    \"documents\": [\n      {\n        \"id\": \"doc_001\",\n        \"type\": \"code\",\n        \"language\": \"python\",\n        \"themes\": [\n          \"development\",\n          \"testing\",\n          \"validation\"\n        ]\n      },\n      {\n        \"id\": \"doc_002\",\n        \"type\": \"documentation\",\n        \"format\": \"markdown\",\n        \"themes\": [\n          \"guides\",\n          \"instructions\",\n          \"knowledge\"\n        ]\n      },\n      {\n        \"id\": \"doc_003\",\n        \"type\": \"configuration\",\n        \"format\": \"json\",\n        \"themes\": [\n          \"settings\",\n          \"parameters\",\n          \"structure\"\n        ]\n      }\n    ]\n  },\n  \"expected_outputs\": {\n    \"memory_blocks\": 3,\n    \"projects\": [\n      \"dev.testing\",\n      \"docs.guides\",\n      \"general.configuration\"\n    ],\n    \"archetypes\": [\n      \"Creator\",\n      \"Guardian\",\n      \"Analyst\"\n    ]\n  }\n}",
+  "topics": [
+    "json",
+    "structure",
+    "configuration",
+    "testing",
+    "type",
+    "themes",
+    "true",
+    "format",
+    "guides",
+    "blogagent"
+  ],
+  "skills": [
+    "nano_warden_memory_tagger.py"
+  ],
+  "project": "docs.user_guides",
+  "archetype": "Guardian",
+  "created_at": "2025-09-17T18:17:52.858973Z",
+  "ethics": {
+    "pii_redacted": true,
+    "consent_logged": true,
+    "privacy_level": "public",
+    "redaction_reason": null
+  },
+  "metadata": {
+    "source_file": "/home/runner/work/BLOGAGENT/BLOGAGENT/test_data/sample_config.json",
+    "file_type": ".json",
+    "size_bytes": 1194,
+    "last_modified": "2025-09-17T18:17:52.858973Z",
+    "encoding": "utf-8"
+  },
+  "links": []
+}

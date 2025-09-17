@@ -1,0 +1,104 @@
+{
+  "1": {
+    "cluster_id": "1",
+    "size": 1,
+    "summary": "Cluster of 1 files with Analyst archetype. Common themes: example, data, class. File types: .py.",
+    "dominant_archetype": "Analyst",
+    "common_topics": [
+      "example",
+      "data",
+      "class",
+      "code",
+      "main"
+    ],
+    "top_tfidf_features": [
+      [
+        "example",
+        0.3442213658975653
+      ],
+      [
+        "class",
+        0.2912642326825552
+      ],
+      [
+        "example class",
+        0.2383070994675452
+      ],
+      [
+        "main",
+        0.21182853286004016
+      ],
+      [
+        "data",
+        0.2013763240206242
+      ]
+    ],
+    "project_distribution": {
+      "blog.test_data": 1
+    },
+    "file_type_distribution": {
+      ".py": 1
+    },
+    "sample_blocks": [
+      {
+        "id_hash": "sha256:e3993cc5a865",
+        "summary": "Module: Sample Python file for testing the BLOGAGENT universal ingest pipeline. This file demonstrat...",
+        "source": "/home/runner/work/BLOGAGENT/BLOGAGENT/test_data/sample_code.py"
+      }
+    ]
+  },
+  "0": {
+    "cluster_id": "0",
+    "size": 2,
+    "summary": "Cluster of 2 files with Analyst archetype. Common themes: themes, json, structure. File types: .md, .json.",
+    "dominant_archetype": "Analyst",
+    "common_topics": [
+      "themes",
+      "json",
+      "structure",
+      "configuration",
+      "testing"
+    ],
+    "top_tfidf_features": [
+      [
+        "themes",
+        0.21825705888052113
+      ],
+      [
+        "documentation",
+        0.17747422142622193
+      ],
+      [
+        "structure",
+        0.11958700595531564
+      ],
+      [
+        "json",
+        0.11787656815365492
+      ],
+      [
+        "configuration",
+        0.11624514114930148
+      ]
+    ],
+    "project_distribution": {
+      "blog.test_data": 2
+    },
+    "file_type_distribution": {
+      ".json": 1,
+      ".md": 1
+    },
+    "sample_blocks": [
+      {
+        "id_hash": "sha256:5d964be34144",
+        "summary": "JSON structure:\n{\n  \"test_config\": {\n    \"pipeline_name\": \"BLOGAGENT Universal Ingest\",\n    \"version...",
+        "source": "/home/runner/work/BLOGAGENT/BLOGAGENT/test_data/sample_config.json"
+      },
+      {
+        "id_hash": "sha256:990dde6460ea",
+        "summary": "# Sample Documentation\n\nThis is a sample markdown file for testing the BLOGAGENT universal ingest pi...",
+        "source": "/home/runner/work/BLOGAGENT/BLOGAGENT/test_data/sample_docs.md"
+      }
+    ]
+  }
+}
