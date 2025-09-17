@@ -1,0 +1,32 @@
+{
+  "pipeline_execution": {
+    "timestamp": "2025-09-17T18:16:54.091777Z",
+    "workspace": ".",
+    "output_base": "_work/pipeline_output"
+  },
+  "phases": {
+    "ingestion": {
+      "status": "completed",
+      "output_count": 6,
+      "output_dir": "_work/pipeline_output/memory_blocks",
+      "processed": 4,
+      "failed": 0,
+      "file_types": {
+        "json": 1,
+        "text": 2,
+        "code": 1
+      },
+      "errors": []
+    },
+    "clustering": {
+      "status": "not_run"
+    },
+    "project_assignment": {
+      "status": "not_run"
+    }
+  },
+  "summary": {
+    "total_memory_blocks": 6,
+    "pipeline_status": "completed"
+  }
+}

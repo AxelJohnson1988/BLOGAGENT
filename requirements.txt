@@ -1,0 +1,41 @@
+# MUSE Pantheon Universal Ingest Pipeline Requirements
+
+# Core dependencies for basic functionality
+numpy>=1.21.0
+
+# Advanced clustering and machine learning (optional but recommended)
+scikit-learn>=1.0.0
+pandas>=1.3.0
+
+# Interactive visualizations (optional)
+plotly>=5.0.0
+
+# Additional text processing
+nltk>=3.6.0
+
+# PDF processing (optional - fallback to external tools)
+PyMuPDF>=1.20.0
+pdfminer.six>=20211012
+
+# Image processing for OCR support
+Pillow>=8.0.0
+
+# YAML support
+PyYAML>=6.0
+
+# Development and testing
+pytest>=6.0.0
+pytest-cov>=3.0.0
+
+# Documentation
+sphinx>=4.0.0
+sphinx-rtd-theme>=1.0.0
+
+# Note: External tools also supported but not required:
+# - tesseract-ocr (for OCR)
+# - poppler-utils (for pdftotext)  
+# - ffmpeg (for video/audio processing)
+# - ollama (for local LLM embeddings)
+
+# Install with: pip install -r requirements.txt
+# For minimal install (basic functionality only): pip install numpy

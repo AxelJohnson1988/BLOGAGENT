@@ -1,0 +1,10 @@
+{
+  "processed": 4,
+  "failed": 0,
+  "file_types": {
+    "json": 1,
+    "text": 2,
+    "code": 1
+  },
+  "errors": []
+}

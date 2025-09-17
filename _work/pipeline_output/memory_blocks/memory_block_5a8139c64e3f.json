@@ -1,0 +1,33 @@
+{
+  "id_hash": "sha256:5a8139c64e3f",
+  "summary": "JSON with 1 top-level keys: config.json",
+  "content": "{\n  \"sample_config\": {\n    \"agent_name\": \"MUSE Pantheon\",\n    \"version\": \"1.0.0\",\n    \"features\": [\n      \"universal_ingest\",\n      \"semantic_clustering\",\n      \"project_assignment\",\n      \"memory_blocks\"\n    ],\n    \"archetypes\": {\n      \"Guardian\": \"security and validation\",\n      \"Vision\": \"visual content processing\",\n      \"Memory\": \"storage and retrieval\",\n      \"Builder\": \"code and development\"\n    },\n    \"supported_formats\": [\n      \".txt\",\n      \".md\",\n      \".py\",\n      \".js\",\n      \".json\",\n      \".pdf\",\n      \".jpg\",\n      \".png\",\n      \".mp4\"\n    ]\n  }\n}",
+  "topics": [
+    "config.json"
+  ],
+  "skills": [
+    "nano_ingest_memory.py"
+  ],
+  "project": {
+    "project_id": "ingest.memory",
+    "archetype": "Memory",
+    "confidence_score": 0.8,
+    "assignment_reason": "Automatic assignment based on file type"
+  },
+  "created_at": "2025-09-17T18:16:53.980709Z",
+  "ethics": {
+    "pii_redacted": true,
+    "consent_logged": true,
+    "validation_status": "passed",
+    "redaction_reason": null
+  },
+  "source": {
+    "file_path": "/home/runner/work/BLOGAGENT/BLOGAGENT/sample_data/config.json",
+    "file_type": ".json",
+    "file_size": 531,
+    "created_at": "2025-09-17T18:16:18.091494Z",
+    "modified_at": "2025-09-17T18:16:18.091494Z"
+  },
+  "links": [],
+  "metadata": {}
+}
