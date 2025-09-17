@@ -96,6 +96,10 @@ class ProjectAssignmentEngine:
         memory_blocks = []
         
         for json_file in blocks_dir.glob('*.json'):
+            # Skip summary files
+            if json_file.name == 'ingestion_summary.json':
+                continue
+                
             try:
                 with open(json_file, 'r', encoding='utf-8') as f:
                     data = json.load(f)

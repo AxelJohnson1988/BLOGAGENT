@@ -43,6 +43,10 @@ class MemoryBlockClusterer:
         memory_blocks = []
         
         for json_file in blocks_dir.glob('*.json'):
+            # Skip summary files
+            if json_file.name == 'ingestion_summary.json':
+                continue
+                
             try:
                 with open(json_file, 'r', encoding='utf-8') as f:
                     data = json.load(f)
@@ -143,7 +147,7 @@ class MemoryBlockClusterer:
             for file_type in file_types:
                 type_counts[file_type] = type_counts.get(file_type, 0) + 1
             
-            cluster_analysis[cluster_id] = {
+            cluster_analysis[str(cluster_id)] = {  # Convert to string key
                 'size': len(cluster_blocks),
                 'top_topics': top_topics,
                 'archetypes': archetype_counts,
@@ -210,43 +214,43 @@ class MemoryBlockClusterer:
             logger.error(f"Failed to create visualization: {e}")
             return ""
     
-    def suggest_project_assignments(self, cluster_analysis: Dict[int, Dict[str, Any]]) -> Dict[int, str]:
+    def suggest_project_assignments(self, cluster_analysis: Dict[str, Dict[str, Any]]) -> Dict[str, str]:  # Change signature
         """Suggest project assignments based on cluster analysis"""
         project_suggestions = {}
         
-        for cluster_id, analysis in cluster_analysis.items():
+        for cluster_id_str, analysis in cluster_analysis.items():  # cluster_id is now string
             top_topics = [topic for topic, count in analysis['top_topics']]
             archetypes = list(analysis['archetypes'].keys())
             
             # Project assignment logic based on content patterns
             if any(topic in top_topics for topic in ['legal', 'contract', 'law']):
-                project_suggestions[cluster_id] = 'legal.documents'
+                project_suggestions[cluster_id_str] = 'legal.documents'
             elif any(topic in top_topics for topic in ['financial', 'payment', 'tax', 'invoice']):
-                project_suggestions[cluster_id] = 'financial.records'
+                project_suggestions[cluster_id_str] = 'financial.records'
             elif any(topic in top_topics for topic in ['code', 'programming', 'technical']):
-                project_suggestions[cluster_id] = 'development.codebase'
+                project_suggestions[cluster_id_str] = 'development.codebase'
             elif any(topic in top_topics for topic in ['research', 'study', 'analysis']):
-                project_suggestions[cluster_id] = 'research.analysis'
+                project_suggestions[cluster_id_str] = 'research.analysis'
             elif any(topic in top_topics for topic in ['communication', 'email', 'message']):
-                project_suggestions[cluster_id] = 'communications.archive'
+                project_suggestions[cluster_id_str] = 'communications.archive'
             elif any(topic in top_topics for topic in ['media', 'image', 'video', 'visual']):
-                project_suggestions[cluster_id] = 'media.collection'
+                project_suggestions[cluster_id_str] = 'media.collection'
             elif any(topic in top_topics for topic in ['personal', 'diary', 'journal']):
-                project_suggestions[cluster_id] = 'personal.journal'
+                project_suggestions[cluster_id_str] = 'personal.journal'
             elif 'documentation' in top_topics:
-                project_suggestions[cluster_id] = 'knowledge.base'
+                project_suggestions[cluster_id_str] = 'knowledge.base'
             else:
                 # Default assignment based on archetype
                 if 'Builder' in archetypes:
-                    project_suggestions[cluster_id] = 'development.general'
+                    project_suggestions[cluster_id_str] = 'development.general'
                 elif 'Vision' in archetypes:
-                    project_suggestions[cluster_id] = 'media.visual'
+                    project_suggestions[cluster_id_str] = 'media.visual'
                 elif 'Guardian' in archetypes:
-                    project_suggestions[cluster_id] = 'security.compliance'
+                    project_suggestions[cluster_id_str] = 'security.compliance'
                 elif 'Scholar' in archetypes:
-                    project_suggestions[cluster_id] = 'research.knowledge'
+                    project_suggestions[cluster_id_str] = 'research.knowledge'
                 else:
-                    project_suggestions[cluster_id] = 'general.miscellaneous'
+                    project_suggestions[cluster_id_str] = 'general.miscellaneous'
         
         return project_suggestions
     
@@ -264,7 +268,7 @@ class MemoryBlockClusterer:
             cluster_assignments.append({
                 'id_hash': block.id_hash,
                 'cluster_id': int(cluster_labels[i]),
-                'suggested_project': project_suggestions.get(cluster_labels[i], 'general.miscellaneous')
+                'suggested_project': project_suggestions.get(str(cluster_labels[i]), 'general.miscellaneous')  # Use string key
             })
         
         assignments_file = output_dir / 'cluster_assignments.json'
