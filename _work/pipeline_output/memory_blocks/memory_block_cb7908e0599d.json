@@ -3,11 +3,11 @@
   "summary": "Sample plain text document for MUSE Pantheon pipeline testing.  This file contains various topics including:",
   "content": "Sample plain text document for MUSE Pantheon pipeline testing.\n\nThis file contains various topics including:\n- Text processing\n- Content extraction  \n- Topic analysis\n- Memory block creation\n\nThe pipeline should extract this content and create a MemoryBlock\nwith appropriate topics, summary, and project assignment.\n\nKeywords: text, processing, pipeline, muse, pantheon, memory",
   "topics": [
-    "pipeline",
-    "text",
-    "sample.txt",
+    "memory",
     "content",
-    "memory"
+    "sample.txt",
+    "pipeline",
+    "text"
   ],
   "skills": [
     "nano_ingest_scribe.py"
@@ -18,7 +18,7 @@
     "confidence_score": 0.8,
     "assignment_reason": "Automatic assignment based on file type"
   },
-  "created_at": "2025-09-17T18:16:53.980947Z",
+  "created_at": "2025-09-17T18:19:32.834094Z",
   "ethics": {
     "pii_redacted": true,
     "consent_logged": true,

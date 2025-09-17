@@ -1,5 +1,30 @@
+# Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.pytest_cache/
+
+# Virtual environments
 .venv/
 .env
+venv/
+env/
+
+# IDE files
 .DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Pipeline outputs (optional - uncomment to exclude from git)
+# _work/
+# *.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp

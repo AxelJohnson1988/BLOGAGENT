@@ -1,9 +1,9 @@
 {
   "total_blocks": 4,
   "archetypes": [
-    "Memory",
+    "Scribe",
     "Builder",
-    "Scribe"
+    "Memory"
   ],
   "projects": [
     "ingest.scribe",
@@ -13,22 +13,22 @@
   "file_types": [
     ".json",
     ".md",
-    ".txt",
-    ".py"
+    ".py",
+    ".txt"
   ],
   "topics_frequency": {
     "config.json": 1,
+    "memory": 1,
+    "content": 1,
+    "sample.txt": 1,
     "pipeline": 1,
     "text": 1,
-    "sample.txt": 1,
-    "content": 1,
-    "memory": 1,
-    "document": 1,
-    "doc.md": 1,
-    "universal": 1,
-    "markdown": 1,
     "sample": 1,
+    "doc.md": 1,
     "documentation": 1,
+    "universal": 1,
+    "document": 1,
+    "markdown": 1,
     "python": 1,
     "sampleagent": 1,
     "__init__": 1,
