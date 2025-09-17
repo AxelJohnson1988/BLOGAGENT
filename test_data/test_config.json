@@ -1,0 +1,17 @@
+{
+  "test_config": {
+    "pipeline": "muse_pantheon",
+    "version": "1.0.0",
+    "settings": {
+      "extract_text": true,
+      "create_embeddings": true,
+      "assign_projects": true
+    },
+    "file_types": [".md", ".py", ".json", ".txt"],
+    "archetype_mappings": {
+      "code": "Builder",
+      "docs": "Scribe",
+      "config": "Warden"
+    }
+  }
+}

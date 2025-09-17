@@ -1,0 +1,8 @@
+{
+  "total_blocks": 3,
+  "timestamp": "2025-09-17T18:15:41.796118Z",
+  "roots_processed": [
+    "test_data"
+  ],
+  "output_directory": "test_output"
+}
