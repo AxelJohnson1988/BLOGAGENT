@@ -1,0 +1,16 @@
+numpy>=1.21.0
+scikit-learn>=1.0.0
+plotly>=5.0.0
+pillow>=8.0.0
+PyMuPDF>=1.23.0
+python-magic>=0.4.24
+requests>=2.25.0
+tqdm>=4.64.0
+argparse>=1.4.0
+pathlib>=1.0.1
+hashlib
+json
+datetime
+email
+zipfile
+subprocess
