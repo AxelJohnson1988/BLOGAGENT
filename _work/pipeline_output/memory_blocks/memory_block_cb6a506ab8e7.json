@@ -1,0 +1,38 @@
+{
+  "id_hash": "sha256:cb6a506ab8e7",
+  "summary": "Code file with 1 classes, 4 functions",
+  "content": "\"\"\"\nSample Python script for testing MUSE Pantheon ingest pipeline.\nThis demonstrates code file extraction and MemoryBlock creation.\n\"\"\"\n\nclass SampleAgent:\n    \"\"\"Sample AI agent class for demonstration\"\"\"\n    \n    def __init__(self, name: str):\n        self.name = name\n        self.memory_blocks = []\n    \n    def process_data(self, data: str) -> dict:\n        \"\"\"Process input data and return structured result\"\"\"\n        return {\n            'processed': True,\n            'agent': self.name,\n            'data_length': len(data)\n        }\n    \n    def add_memory(self, block):\n        \"\"\"Add a memory block to the agent's memory\"\"\"\n        self.memory_blocks.append(block)\n\n\ndef main():\n    \"\"\"Main function demonstrating agent usage\"\"\"\n    agent = SampleAgent(\"TestAgent\")\n    result = agent.process_data(\"sample data\")\n    print(f\"Agent {agent.name} processed data: {result}\")\n\n\nif __name__ == \"__main__\":\n    main()",
+  "topics": [
+    "python",
+    "sampleagent",
+    "__init__",
+    "process_data",
+    "add_memory",
+    "main"
+  ],
+  "skills": [
+    "nano_ingest_builder.py"
+  ],
+  "project": {
+    "project_id": "ingest.builder",
+    "archetype": "Builder",
+    "confidence_score": 0.8,
+    "assignment_reason": "Automatic assignment based on file type"
+  },
+  "created_at": "2025-09-17T18:19:32.834449Z",
+  "ethics": {
+    "pii_redacted": true,
+    "consent_logged": true,
+    "validation_status": "passed",
+    "redaction_reason": null
+  },
+  "source": {
+    "file_path": "/home/runner/work/BLOGAGENT/BLOGAGENT/sample_data/sample_agent.py",
+    "file_type": ".py",
+    "file_size": 924,
+    "created_at": "2025-09-17T18:15:50.772478Z",
+    "modified_at": "2025-09-17T18:15:50.772478Z"
+  },
+  "links": [],
+  "metadata": {}
+}

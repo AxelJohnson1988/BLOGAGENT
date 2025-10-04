@@ -1,0 +1,22 @@
+{
+  "sample_config": {
+    "agent_name": "MUSE Pantheon",
+    "version": "1.0.0",
+    "features": [
+      "universal_ingest",
+      "semantic_clustering", 
+      "project_assignment",
+      "memory_blocks"
+    ],
+    "archetypes": {
+      "Guardian": "security and validation",
+      "Vision": "visual content processing",
+      "Memory": "storage and retrieval",
+      "Builder": "code and development"
+    },
+    "supported_formats": [
+      ".txt", ".md", ".py", ".js", ".json", 
+      ".pdf", ".jpg", ".png", ".mp4"
+    ]
+  }
+}

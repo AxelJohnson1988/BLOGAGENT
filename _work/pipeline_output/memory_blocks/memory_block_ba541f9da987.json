@@ -1,0 +1,38 @@
+{
+  "id_hash": "sha256:ba541f9da987",
+  "summary": "# Sample Documentation  This is a sample markdown document for testing the MUSE Pantheon universal ingest pipeline.",
+  "content": "# Sample Documentation\n\nThis is a sample markdown document for testing the MUSE Pantheon universal ingest pipeline.\n\n## Features\n\n- Universal file processing\n- Semantic clustering  \n- Project assignment\n- MemoryBlock creation\n\n## Usage\n\nRun the pipeline with:\n\n```bash\n./run_pipeline.py --target ./sample_data\n```\n\n## Topics\n\nThis document covers:\n- Documentation processing\n- Markdown extraction\n- Content analysis\n- Memory system integration",
+  "topics": [
+    "sample",
+    "doc.md",
+    "documentation",
+    "universal",
+    "document",
+    "markdown"
+  ],
+  "skills": [
+    "nano_ingest_scribe.py"
+  ],
+  "project": {
+    "project_id": "ingest.scribe",
+    "archetype": "Scribe",
+    "confidence_score": 0.8,
+    "assignment_reason": "Automatic assignment based on file type"
+  },
+  "created_at": "2025-09-17T18:19:32.834274Z",
+  "ethics": {
+    "pii_redacted": true,
+    "consent_logged": true,
+    "validation_status": "passed",
+    "redaction_reason": null
+  },
+  "source": {
+    "file_path": "/home/runner/work/BLOGAGENT/BLOGAGENT/sample_data/sample_doc.md",
+    "file_type": ".md",
+    "file_size": 443,
+    "created_at": "2025-09-17T18:16:18.191494Z",
+    "modified_at": "2025-09-17T18:16:18.191494Z"
+  },
+  "links": [],
+  "metadata": {}
+}

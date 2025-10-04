@@ -1,0 +1,12 @@
+Sample plain text document for MUSE Pantheon pipeline testing.
+
+This file contains various topics including:
+- Text processing
+- Content extraction  
+- Topic analysis
+- Memory block creation
+
+The pipeline should extract this content and create a MemoryBlock
+with appropriate topics, summary, and project assignment.
+
+Keywords: text, processing, pipeline, muse, pantheon, memory

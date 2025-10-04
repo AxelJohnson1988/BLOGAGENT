@@ -1,0 +1,27 @@
+MUSE Pantheon Pipeline Execution Summary
+==================================================
+
+Executed: 2025-09-17T18:19:32.944392Z
+Workspace: .
+Output Directory: _work/pipeline_output
+
+Phase Results:
+--------------------
+  Ingestion: completed (6 outputs) (processed: 4, failed: 0)
+    File types: {'json': 1, 'text': 2, 'code': 1}
+  Clustering: not_run
+  Project_Assignment: not_run
+
+Overall Results:
+--------------------
+Total Memory Blocks: 6
+Pipeline Status: completed
+
+Output Structure:
+--------------------
+📁 _work/pipeline_output/
+├── memory_blocks/           # Raw MemoryBlock JSON files
+├── clustering_results/      # Interactive visualizations & cluster data
+├── project_assignments/     # Project hierarchies & updated blocks
+├── pipeline_summary.txt     # This human-readable report
+└── pipeline_report.json     # Machine-readable execution data
